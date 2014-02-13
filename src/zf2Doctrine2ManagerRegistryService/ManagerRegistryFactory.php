@@ -17,17 +17,17 @@ class ManagerRegistryFactory implements FactoryInterface
         return new Registry(
             'ORM',
             $this->getConnections($options['connection']),
-            $this->getEntitiyManagers($options['entitymanager']),
+            $this->getEntityManagers($options['entitymanager']),
             'orm_default',
             'orm_default',
             'Doctrine\ORM\Proxy\Proxy'
         );
     }
 
-    public function getEntitiyManagers(array $options)
+    public function getEntityManagers(array $options)
     {
         $entityManagers = array();
-        foreach ($options['entitymanager'] as $key => $entityManager) {
+        foreach ($options as $key => $entityManager) {
             $entityManagers[$key] = 'doctrine.entitymanager.' . $key;
         }
 

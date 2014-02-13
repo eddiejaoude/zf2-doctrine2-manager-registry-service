@@ -50,5 +50,7 @@ class Registry extends AbstractManagerRegistry implements ServiceManagerAwareInt
     public function setServiceManager(ServiceManager $serviceManager)
     {
         $this->serviceManager = $serviceManager;
+
+        return $this;
     }
 }
