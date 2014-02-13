@@ -1,5 +1,5 @@
 <?php
-namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Tests\Zf2Doctrine2ManagerRegistryServiceTest\Registry;
+namespace EddieJaoude\Tests\Zf2Doctrine2ManagerRegistryServiceTest\Registry;
 
 use EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry\ManagerRegistryFactory;
 

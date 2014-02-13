@@ -1,5 +1,5 @@
 <?php
-namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Tests;
+namespace EddieJaoude\Tests;
 
 $vendorDir = __DIR__ . '/../vendor';
 
