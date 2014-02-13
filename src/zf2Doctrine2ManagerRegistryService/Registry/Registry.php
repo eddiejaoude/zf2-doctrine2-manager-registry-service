@@ -1,5 +1,5 @@
 <?php
-namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService;
+namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry;
 
 use Doctrine\Common\Persistence\AbstractManagerRegistry;
 use Doctrine\ORM\ORMException;

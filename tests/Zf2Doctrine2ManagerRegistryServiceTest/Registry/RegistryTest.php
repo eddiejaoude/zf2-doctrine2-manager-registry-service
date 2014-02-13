@@ -1,7 +1,7 @@
 <?php
-namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Tests\Zf2Doctrine2ManagerRegistryServiceTest;
+namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Tests\Zf2Doctrine2ManagerRegistryServiceTest\Registry;
 
-use EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry;
+use EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry\Registry;
 
 /**
  * Class RegistryTest
@@ -36,7 +36,7 @@ class RegistryTest extends \PHPUnit_Framework_TestCase
             ->andReturn(true);
 
         $this->assertInstanceOf(
-            'EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry',
+            'EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry\Registry',
             $this->instance->setServiceManager($serviceManager)
         );
     }

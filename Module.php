@@ -1,6 +1,7 @@
 <?php
 namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService;
 
+use EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry\ManagerRegistryFactory;
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\ModuleRouteListener;
 

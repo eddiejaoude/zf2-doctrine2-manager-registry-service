@@ -1,7 +1,7 @@
 <?php
-namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Tests\Zf2Doctrine2ManagerRegistryServiceTest;
+namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Tests\Zf2Doctrine2ManagerRegistryServiceTest\Registry;
 
-use EddieJaoude\Zf2Doctrine2ManagerRegistryService\ManagerRegistryFactory;
+use EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry\ManagerRegistryFactory;
 
 /**
  * Class ManagerRegistryFactoryTest
