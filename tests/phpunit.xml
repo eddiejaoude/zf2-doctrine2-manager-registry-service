@@ -13,7 +13,7 @@
         >
     <testsuites>
         <testsuite name="EddieJaoude\Zf2Doctrine2ManagerRegistryService">
-            <directory>./Zf2Doctrine2ManagerRegistryService</directory>
+            <directory>./Zf2Doctrine2ManagerRegistryServiceTest</directory>
         </testsuite>
     </testsuites>
 
