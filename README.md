@@ -30,8 +30,20 @@ Then you are good to go. All requests & responses will be logged.
 
 ## Example Usage
 
+On the service manager, get the ManagerRegistry
+
 ```
 $serviceManager->get('Doctrine\ManagerRegistry');
+```
+
+---
+
+## Unit tests
+
+To run unit tests from the root of the project
+
+```
+vendor/bin/phpunit -c tests/phpunit.xml
 ```
 
 ---
