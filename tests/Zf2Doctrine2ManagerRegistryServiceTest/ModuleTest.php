@@ -31,7 +31,12 @@ class ModuleTest extends \PHPUnit_Framework_TestCase
     {
         $response = $this->instance->getAutoloaderConfig();
 
-        $this->assertTrue(array_key_exists('EddieJaoude\Zf2Doctrine2ManagerRegistryService', $response['Zend\Loader\StandardAutoloader']['namespaces']));
+        $this->assertTrue(
+            array_key_exists(
+                'EddieJaoude\Zf2Doctrine2ManagerRegistryService',
+                $response['Zend\Loader\StandardAutoloader']['namespaces']
+            )
+        );
     }
 
     public function testGetServiceConfig()

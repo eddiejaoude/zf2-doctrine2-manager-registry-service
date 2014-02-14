@@ -59,7 +59,7 @@ class ManagerRegistryFactoryTest extends \PHPUnit_Framework_TestCase
             ->andReturn(
                 array(
                     'doctrine' => array(
-                        'connection' => array(
+                        'connection'    => array(
                             'connKey' => 'connValue'
                         ),
                         'entitymanager' => array(
