@@ -51,3 +51,12 @@ vendor/bin/phpunit -c tests/phpunit.xml
 ```
 
 ---
+
+## Resources
+
+* Github https://github.com/eddiejaoude/zf2-doctrine2-manager-registry-service
+* Packagist https://packagist.org/packages/eddiejaoude/zf2-doctrine2-manager-registry-service
+* Coveralls https://coveralls.io/r/eddiejaoude/zf2-doctrine2-manager-registry-service
+
+---
+
