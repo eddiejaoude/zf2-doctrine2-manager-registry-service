@@ -24,6 +24,10 @@ class ManagerRegistryFactory implements FactoryInterface
         );
     }
 
+    /**
+      * @param array
+      * @return array
+      */
     public function getEntityManagers(array $options)
     {
         $entityManagers = array();
@@ -34,6 +38,11 @@ class ManagerRegistryFactory implements FactoryInterface
         return $entityManagers;
     }
 
+
+    /**
+      * @param array
+      * @return array
+      */
     public function getConnections(array $options)
     {
         $connections = array();
