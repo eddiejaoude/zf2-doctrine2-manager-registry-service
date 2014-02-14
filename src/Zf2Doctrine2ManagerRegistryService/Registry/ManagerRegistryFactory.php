@@ -4,6 +4,11 @@ namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
+/**
+ * Class ManagerRegistryFactory
+ *
+ * @package EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry
+ */
 class ManagerRegistryFactory implements FactoryInterface
 {
 
@@ -25,9 +30,10 @@ class ManagerRegistryFactory implements FactoryInterface
     }
 
     /**
-      * @param array
-      * @return array
-      */
+     * @param array
+     *
+     * @return array
+     */
     public function getEntityManagers(array $options)
     {
         $entityManagers = array();
@@ -40,9 +46,10 @@ class ManagerRegistryFactory implements FactoryInterface
 
 
     /**
-      * @param array
-      * @return array
-      */
+     * @param array
+     *
+     * @return array
+     */
     public function getConnections(array $options)
     {
         $connections = array();

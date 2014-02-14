@@ -5,8 +5,16 @@ use EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry\ManagerRegistryFacto
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\ModuleRouteListener;
 
+/**
+ * Class Module
+ *
+ * @package EddieJaoude\Zf2Doctrine2ManagerRegistryService
+ */
 class Module
 {
+    /**
+     * @param MvcEvent $e
+     */
     public function onBootstrap(MvcEvent $e)
     {
         $eventManager        = $e->getApplication()->getEventManager();
@@ -16,6 +24,9 @@ class Module
         return;
     }
 
+    /**
+     * @return array
+     */
     public function getAutoloaderConfig()
     {
         return array(
@@ -36,7 +47,7 @@ class Module
             'factories' => array(
                 'Doctrine\ManagerRegistry' => function ($sm) {
                     $managerRegistryFactory = new ManagerRegistryFactory();
-                    $managerRegistry = $managerRegistryFactory->createService($sm);
+                    $managerRegistry        = $managerRegistryFactory->createService($sm);
 
                     return $managerRegistry;
                 },

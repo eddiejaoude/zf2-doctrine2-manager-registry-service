@@ -6,6 +6,11 @@ use Doctrine\ORM\ORMException;
 use Zend\ServiceManager\ServiceManager;
 use Zend\ServiceManager\ServiceManagerAwareInterface;
 
+/**
+ * Class Registry
+ *
+ * @package EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry
+ */
 class Registry extends AbstractManagerRegistry implements ServiceManagerAwareInterface
 {
     /**
