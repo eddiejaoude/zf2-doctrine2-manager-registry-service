@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/eddiejaoude/zf2-doctrine2-manager-registry-service.png)](https://travis-ci.org/eddiejaoude/zf2-doctrine2-manager-registry-service)
+[![Coverage Status](https://coveralls.io/repos/eddiejaoude/zf2-doctrine2-manager-registry-service/badge.png?branch=master)](https://coveralls.io/r/eddiejaoude/zf2-doctrine2-manager-registry-service?branch=master)
+[![Total Downloads](https://poser.pugx.org/eddiejaoude/zf2-doctrine2-manager-registry-service/downloads.png)](https://packagist.org/packages/eddiejaoude/zf2-doctrine2-manager-registry-service)
+
 # zf2-doctrine2-Manager-registry-service
 
 Creates &amp; Exposes Doctrine2 Register Service for Zend Framework 2 as a Module (ManagerRegistry)
