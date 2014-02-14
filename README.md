@@ -11,7 +11,7 @@ Creates &amp; Exposes Doctrine2 Register Service for Zend Framework 2 as a Modul
 #### 1. Add to composer.
 ```
     "require" : {
-        "eddiejaoude/zf2-doctrine2-Manager-registry-service" : "0.3"
+        "eddiejaoude/zf2-doctrine2-Manager-registry-service" : "0.4"
     }
 ```
 
