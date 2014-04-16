@@ -3,6 +3,7 @@ namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry;
 
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\ServiceManager\ServiceManager;
 
 /**
  * Class ManagerRegistryFactory
@@ -19,7 +20,7 @@ class ManagerRegistryFactory implements FactoryInterface
     {
         $options = $serviceLocator->get('Config')['doctrine'];
 
-        return new Registry(
+        $registry = new Registry(
             'ORM',
             $this->getConnections($options['connection']),
             $this->getEntityManagers($options['entitymanager']),
@@ -27,6 +28,12 @@ class ManagerRegistryFactory implements FactoryInterface
             'orm_default',
             'Doctrine\ORM\Proxy\Proxy'
         );
+
+        if ($serviceLocator instanceof ServiceManager) {
+            $registry->setServiceManager($serviceLocator);
+        }
+
+        return $registry;
     }
 
     /**

@@ -53,7 +53,7 @@ class ManagerRegistryFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testCreateService()
     {
-        $serviceManager = \Mockery::mock('Zend\ServiceManager\ServiceLocatorInterface');
+        $serviceManager = \Mockery::mock('Zend\ServiceManager\ServiceManager');
         $serviceManager->shouldReceive('get')
             ->with('Config')
             ->andReturn(
