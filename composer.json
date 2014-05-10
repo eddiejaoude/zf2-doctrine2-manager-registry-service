@@ -19,8 +19,8 @@
     ],
     "require" : {
         "php" : ">=5.4",
-        "zendframework/zend-di" : "2.2.*",
-        "zendframework/zend-mvc" : "2.2.*",
+        "zendframework/zend-di" : "2.*",
+        "zendframework/zend-mvc" : "2.*",
         "doctrine/orm": ">2.4",
         "doctrine/doctrine-orm-module": "0.8"
     },
@@ -28,7 +28,7 @@
         "phpunit/phpunit": "3.7.*",
         "mockery/mockery" : "0.8.0",
         "satooshi/php-coveralls": "dev-master",
-        "zendframework/zendframework": "2.2.*"
+        "zendframework/zendframework": "2.*"
     },
     "autoload" : {
         "psr-4" : {
