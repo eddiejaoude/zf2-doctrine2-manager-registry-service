@@ -5,3 +5,5 @@ demos/
 extras/documentation
 .idea
 vendor
+composer.phar
+
