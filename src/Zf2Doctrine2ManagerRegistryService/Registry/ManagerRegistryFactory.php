@@ -26,12 +26,9 @@ class ManagerRegistryFactory implements FactoryInterface
             $this->getEntityManagers($options['entitymanager']),
             'orm_default',
             'orm_default',
-            'Doctrine\ORM\Proxy\Proxy'
+            'Doctrine\ORM\Proxy\Proxy',
+            $serviceLocator
         );
-
-        if ($serviceLocator instanceof ServiceManager) {
-            $registry->setServiceManager($serviceLocator);
-        }
 
         return $registry;
     }

@@ -2,6 +2,7 @@
 namespace EddieJaoude\Tests\Zf2Doctrine2ManagerRegistryServiceTest\Registry;
 
 use EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry\Registry;
+use Zend\ServiceManager\ServiceManager;
 
 /**
  * Class RegistryTest
@@ -16,28 +17,38 @@ class RegistryTest extends \PHPUnit_Framework_TestCase
      */
     private $instance;
 
+    /**
+     * @var ServiceManager
+     */
+    private $serviceManager;
+
     public function setUp()
     {
+        $this->serviceManager = \Mockery::mock('Zend\ServiceManager\ServiceManager');
+
         $this->instance = new Registry(
             'ORM',
             array('testConnection' => true),
             array('testService' => true),
             'orm_default',
             'orm_default',
-            'Doctrine\ORM\Proxy\Proxy'
+            'Doctrine\ORM\Proxy\Proxy',
+            $this->serviceManager
         );
     }
 
-    public function testSetServiceManager()
+    /**
+     * @test
+     */
+    public function testRegistry()
     {
-        $serviceManager = \Mockery::mock('Zend\ServiceManager\ServiceManager');
-        $serviceManager->shouldReceive('get')
-            ->with('testService')
-            ->andReturn(true);
+        $defaultManager = \Mockery::mock();
 
-        $this->assertInstanceOf(
-            'EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry\Registry',
-            $this->instance->setServiceManager($serviceManager)
-        );
+        $this->serviceManager->shouldReceive('get')
+            ->with('testService')
+            ->andReturn($defaultManager);
+
+        $res = $this->instance->getManager('testService');
+        $this->assertEquals($defaultManager, $res);
     }
 }
