@@ -4,19 +4,44 @@ namespace EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry;
 use Doctrine\Common\Persistence\AbstractManagerRegistry;
 use Doctrine\ORM\ORMException;
 use Zend\ServiceManager\ServiceManager;
-use Zend\ServiceManager\ServiceManagerAwareInterface;
 
 /**
  * Class Registry
  *
  * @package EddieJaoude\Zf2Doctrine2ManagerRegistryService\Registry
  */
-class Registry extends AbstractManagerRegistry implements ServiceManagerAwareInterface
+class Registry extends AbstractManagerRegistry
 {
+
     /**
      * @var \Zend\ServiceManager\ServiceManager
      */
     protected $serviceManager;
+
+    /**
+     * Constructor.
+     *
+     * @param string $name
+     * @param array  $connections
+     * @param array  $managers
+     * @param string $defaultConnection
+     * @param string $defaultManager
+     * @param string $proxyInterfaceName
+     * @param ServiceManager $serviceManager
+     */
+    public function __construct($name, array $connections, array $managers, $defaultConnection, $defaultManager, $proxyInterfaceName, ServiceManager $serviceManager)
+    {
+        parent::__construct(
+            $name,
+            $connections,
+            $managers,
+            $defaultConnection,
+            $defaultManager,
+            $proxyInterfaceName
+        );
+
+        $this->serviceManager = $serviceManager;
+    }
 
     /**
      * {@inheritdoc}
@@ -47,15 +72,5 @@ class Registry extends AbstractManagerRegistry implements ServiceManagerAwareInt
         }
 
         throw ORMException::unknownEntityNamespace($alias);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setServiceManager(ServiceManager $serviceManager)
-    {
-        $this->serviceManager = $serviceManager;
-
-        return $this;
     }
 }
