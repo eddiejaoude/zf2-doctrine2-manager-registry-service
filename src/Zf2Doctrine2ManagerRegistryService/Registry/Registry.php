@@ -56,7 +56,11 @@ class Registry extends AbstractManagerRegistry
      */
     protected function resetService($name)
     {
+        $allowOverwrite = $this->serviceManager->getAllowOverride();
+
+        $this->serviceManager->setAllowOverride(true);
         $this->serviceManager->setService($name, null);
+        $this->serviceManager->setAllowOverride($allowOverwrite);
     }
 
     /**
